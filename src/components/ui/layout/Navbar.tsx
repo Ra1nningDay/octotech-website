@@ -1,28 +1,53 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import worldIcon from "@/assets/icons/world.png";
+import logoImage from "@/assets/images/logo.png";
 import Link from "next/link";
+
+const links = [
+    {
+        title: "Home",
+        url: "/",
+    },
+    {
+        title: "About Us",
+        url: "/about",
+    },
+    {
+        title: "Our Services",
+        url: "/services",
+    },
+];
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 border-2 px-4 py-4 shadow-xs font-serif">
-            <div className="flex items-center justify-between">
-                <div className="flex">
-                    <Link href="/">
-                        <h1 className="text-4xl font-bold uppecase">
-                            OCTOTECH
-                        </h1>
-                    </Link>
-                </div>
+        <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 font-serif">
+            <div className="flex items-center justify-between px-4">
+                <Link href="/" className="flex items-center gap-2">
+                    <Image src={logoImage} alt="logo" width={70} />
+                    <h1 className="text-4xl font-bold uppecase">OCTOTECH</h1>
+                </Link>
 
-                <Button variant="ghost" className="cursor-pointer">
-                    <Image
-                        src={worldIcon}
-                        alt="world"
-                        className=""
-                        width={30}
-                    />
-                </Button>
+                <ul className="flex items-center gap-4">
+                    {links.map((link, index) => (
+                        <li key={index}>
+                            <Link
+                                href={link.url}
+                                className="text-[20px] font-semibold"
+                            >
+                                {link.title}
+                            </Link>
+                        </li>
+                    ))}
+                    <Button variant="link" className="cursor-pointer">
+                        <Image
+                            src={worldIcon}
+                            alt="world"
+                            className=""
+                            width={30}
+                        />
+                    </Button>
+                </ul>
             </div>
         </nav>
     );
