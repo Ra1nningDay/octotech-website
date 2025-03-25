@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import playIcon from "@/assets/icons/play-button.png";
-import arrowUp from "@/assets/icons/right-up.png";
-import bgImage from "@/assets/images/bg.jpg";
 import {
     Carousel,
     CarouselContent,
@@ -22,7 +19,7 @@ export default function HeroSection() {
         <div
             className="relative h-screen w-full"
             style={{
-                backgroundImage: `url(${bgImage.src})`,
+                backgroundImage: `url("/assets/images/bg.jpg")`,
                 backgroundPosition: "center",
                 backgroundSize: "cover", // ปรับให้ภาพครอบคลุมทุกขนาดหน้าจอ
                 backgroundRepeat: "no-repeat",
@@ -95,7 +92,7 @@ export default function HeroSection() {
                         Contact Us
                         <span>
                             <Image
-                                src={arrowUp}
+                                src="/assets/icons/right-up.png"
                                 width={16}
                                 height={16}
                                 alt="Arrow pointing up"
@@ -112,7 +109,7 @@ export default function HeroSection() {
                 className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 z-50 px-4 max-w-max flex items-center gap-2 sm:gap-3"
             >
                 <Image
-                    src={playIcon}
+                    src="/assets/icons/play-button.png"
                     width={32}
                     height={32}
                     alt="Play Intro Video"

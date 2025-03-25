@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import worldIcon from "@/assets/icons/world.png";
-import logoImage from "@/assets/images/logo.png";
+import worldIcon from "../../../../public/assets/icons/world.png";
+import logoImage from "../../../../public/assets/images/logo.png";
 import Link from "next/link";
 // import { useRouter } from "next/navigation"; // เปลี่ยนมาใช้ next/navigation
 import { useEffect, useState } from "react";
