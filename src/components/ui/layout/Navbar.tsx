@@ -21,11 +21,11 @@ const links = [
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 font-serif">
+        <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 font-serif bg-white">
             <div className="flex items-center justify-between px-4">
                 <Link href="/" className="flex items-center gap-2">
-                    <Image src={logoImage} alt="logo" width={70} />
-                    <h1 className="text-4xl font-bold uppecase">OCTOTECH</h1>
+                    <Image src={logoImage} alt="logo" width={50} />
+                    <h1 className="text-3xl font-bold uppecase">OCTOTECH</h1>
                 </Link>
 
                 <ul className="flex items-center gap-4">
@@ -39,7 +39,7 @@ export default function Navbar() {
                             </Link>
                         </li>
                     ))}
-                    <Button variant="link" className="cursor-pointer">
+                    <Button variant="link" className="cursor-pointer p-0">
                         <Image
                             src={worldIcon}
                             alt="world"

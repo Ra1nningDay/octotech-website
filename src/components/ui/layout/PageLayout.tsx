@@ -3,7 +3,7 @@
 
 import Navbar from "@/components/ui/layout/Navbar";
 import Footer from "@/components/ui/layout/footer/Footer";
-import ContactPopup from "../ContactPopup";
+// import ContactPopup from "../ContactPopup";
 
 interface PageLayoutProps {
     children: React.ReactNode;
@@ -15,7 +15,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
-            <ContactPopup />
+            {/* <ContactPopup /> */}
         </div>
     );
 }
