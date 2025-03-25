@@ -33,6 +33,7 @@ export default function Navbar() {
                         width={40}
                         height={40}
                         className="invert"
+                        unoptimized
                     />
                     <h1 className="text-2xl sm:text-3xl font-bold uppercase text-white">
                         OCTOTECH
@@ -70,6 +71,7 @@ export default function Navbar() {
                             width={24}
                             height={24}
                             className="invert"
+                            unoptimized
                         />
                         <span className="text-[14px] lg:text-[16px] hidden lg:block">
                             EN

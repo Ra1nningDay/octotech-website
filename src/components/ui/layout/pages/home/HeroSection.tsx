@@ -97,6 +97,7 @@ export default function HeroSection() {
                                 height={16}
                                 alt="Arrow pointing up"
                                 className="invert"
+                                unoptimized
                             />
                         </span>
                     </Button>
@@ -114,6 +115,7 @@ export default function HeroSection() {
                     height={32}
                     alt="Play Intro Video"
                     className="invert"
+                    unoptimized
                 />
                 <span className="text-white text-[14px] sm:text-[16px] hidden sm:block">
                     Watch Our Intro Video
