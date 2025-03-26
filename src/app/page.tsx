@@ -3,6 +3,7 @@ import BeforeAboutSection from "@/components/ui/layout/pages/home/BeforeAboutSec
 import HeroSection from "@/components/ui/layout/pages/home/HeroSection";
 import LatestSection from "@/components/ui/layout/pages/home/LatestSection";
 import AboutSection from "@/components/ui/layout/pages/home/AboutSection";
+import ContactSection from "@/components/ui/layout/pages/home/ContactSection";
 
 // import HomePage from "@/components/ui/layout/pages/home/HomeSection";
 
@@ -13,6 +14,7 @@ export default function Home() {
             <LatestSection />
             <BeforeAboutSection />
             <AboutSection />
+            <ContactSection />
         </PageLayout>
     );
 }

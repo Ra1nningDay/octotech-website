@@ -1,18 +1,11 @@
 export const footerData = [
     {
         title: "Support",
-        links: [
-            { name: "About", href: "#" },
-            { name: "Careers", href: "#" },
-            { name: "Brand Center", href: "#" },
-            { name: "Blog", href: "#" },
-        ],
+        links: [{ name: "About", href: "#" }],
     },
     {
         title: "Discover",
         links: [
-            { name: "Discord Server", href: "#" },
-            { name: "Twitter", href: "#" },
             { name: "Facebook", href: "#" },
             { name: "Contact Us", href: "#" },
         ],
