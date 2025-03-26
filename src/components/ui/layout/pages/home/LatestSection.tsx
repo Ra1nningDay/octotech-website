@@ -5,7 +5,7 @@ export default function LatestSection() {
     return (
         <>
             {/* Section: ViennaUP */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-white">
+            <section className="py-12 sm:py-16 lg:py-18 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-10">
                     <div className="flex flex-col lg:flex-row  justify-between gap-8 lg:gap-12">
                         {/* Left Content */}
@@ -46,8 +46,8 @@ export default function LatestSection() {
                                 to reach out via our Contact Us page to schedule
                                 a meeting.
                             </p>
-                            <Button className="mt-10 py-6 text-md sm:text-lg lg:text-xl font-bold">
-                                Contact us
+                            <Button className="mt-10 ms-auto py-6 text-md sm:text-lg lg:text-xl font-bold max-w-max">
+                                Our Projects
                             </Button>
                         </div>
                     </div>
