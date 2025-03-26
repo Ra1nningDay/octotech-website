@@ -31,7 +31,7 @@ export default function HeroSection() {
                 {/* Left Content */}
                 <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full lg:w-1/2 h-full">
                     <div className="mt-auto z-10">
-                        <div className="flex gap-3 sm:gap-4 mb-6 lg:mb-10 sm:mb-8">
+                        <div className="flex gap-3 sm:gap-4 mb-6 lg:mb-10 sm:mb-8 justify-center sm:justify-start">
                             <p className="text-white border-b-4 border-[#FD4055] px-2 py-1 rounded-2xl text-sm sm:text-base">
                                 AI Solutions
                             </p>
@@ -48,7 +48,7 @@ export default function HeroSection() {
                         </h1>
                     </div>
                     <p className="flex lg:mt-auto gap-3 z-10 sm:gap-4 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[20px] sm:mt-8 mb-8 sm:mb-10 lg:mb-14 text-gray-100 leading-relaxed tracking-wide max-w-md sm:max-w-lg lg:max-w-3xl group">
-                        <span className="text-[#FD4055] transition-transform group-hover:scale-110">
+                        <span className="text-[#FD4055] hidden sm:block transition-transform group-hover:scale-110">
                             ▣
                         </span>
                         <span>
@@ -67,7 +67,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Right Content */}
-                <div className="flex flex-col items-center lg:items-end w-full lg:mt-30 lg:w-1/2 h-full z-10">
+                <div className="flex flex-col items-center justify-start sm:justify-end lg:items-end w-full lg:mt-30 lg:w-1/2 h-full z-10">
                     {/* Carousel */}
                     <Carousel className="w-full max-w-sm sm:max-w-md lg:max-w-lg mt-8 sm:mt-12 lg:mt-14">
                         <CarouselContent>
@@ -88,7 +88,7 @@ export default function HeroSection() {
                             </CarouselNext>
                         </div>
                     </Carousel>
-                    <Button className="py-4 px-6 lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-6 sm:mt-8 mb-8 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-[#35A8AB]/50 shadow-lg transition-all duration-300 ease-in-out hover:bg-opacity-30 hover:scale-105 hover:shadow-xl hover:-translate-y-1 group">
+                    <Button className="py-4 px-6  lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-10 sm:mt-8 mb-30 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-[#35A8AB]/50 shadow-lg transition-all duration-300 ease-in-out hover:bg-opacity-30 hover:scale-105 hover:shadow-xl hover:-translate-y-1 group">
                         Contact Us
                         <span className="flex items-center">
                             <Image
