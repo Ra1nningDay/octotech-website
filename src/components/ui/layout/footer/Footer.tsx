@@ -6,7 +6,7 @@ import { socialIcons } from "./socialIcons";
 export default function Footer() {
     return (
         <footer className="bg-[#f5f5f5]">
-            <div className="mx-auto w-full max-w-screen-xl">
+            <div className="mx-auto w-full px-10">
                 <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                     {footerData.map((section, index) => (
                         <FooterSection

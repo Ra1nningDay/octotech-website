@@ -46,7 +46,7 @@ export default function LatestSection() {
                                 to reach out via our Contact Us page to schedule
                                 a meeting.
                             </p>
-                            <Button className="mt-10 ms-auto py-6 text-md sm:text-lg lg:text-xl font-bold max-w-max">
+                            <Button className="mt-10 ms-auto py-6 text-md sm:text-lg  cursor-pointer lg:text-xl font-bold max-w-max">
                                 Our Projects
                             </Button>
                         </div>

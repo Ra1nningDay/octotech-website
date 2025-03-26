@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function ContactSection() {
     return (
         <section className="py-10 md:py-16 lg:py-18">
-            <div className="px-4 sm:px-6 lg:px-10">
+            <div className="px-4 sm:px-6 lg:px-10 container mx-auto">
                 <Card className="bg-white p-6 sm:p-8 flex flex-col lg:flex-row gap-10 justify-center items-stretch  shadow-sm rounded-xl">
                     {/* Google Map */}
                     <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-[565px] rounded-lg overflow-hidden">
@@ -56,7 +56,7 @@ export default function ContactSection() {
                                 <Input
                                     id="name"
                                     type="text"
-                                    placeholder="Name"
+                                    placeholder="Name.."
                                     className="w-full border-gray-300 rounded-md focus:ring-[#1A3C34] focus:border-[#1A3C34]"
                                 />
                             </div>
@@ -70,7 +70,7 @@ export default function ContactSection() {
                                 <Input
                                     id="email"
                                     type="email"
-                                    placeholder="Email"
+                                    placeholder="Email.."
                                     className="w-full border-gray-300 rounded-md focus:ring-[#1A3C34] focus:border-[#1A3C34]"
                                 />
                             </div>
@@ -83,13 +83,13 @@ export default function ContactSection() {
                                 </label>
                                 <Textarea
                                     id="message"
-                                    placeholder="ข้อความ"
+                                    placeholder="Messages.."
                                     className="w-full border-gray-300 rounded-md focus:ring-[#1A3C34] focus:border-[#1A3C34] min-h-[100px]"
                                 />
                             </div>
                             <Button
                                 type="submit"
-                                className="bg-[#1A3C34] text-white hover:bg-[#2A5C4A] rounded-md py-2 px-4 mt-2"
+                                className="bg-black text-white cursor-pointer rounded-md text-xl py-6 px-4 mt-2"
                             >
                                 Send Message
                             </Button>
