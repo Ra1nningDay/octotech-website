@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
@@ -8,6 +10,8 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 
+import { motion } from "framer-motion";
+
 const carouselItems = [
     "OCTOTECH builds intelligent AI-powered solutions to accelerate business growth — from custom software to strategic consulting.",
     "We provide cutting-edge AI tools to help businesses optimize their operations and achieve their goals.",
@@ -17,9 +21,9 @@ const carouselItems = [
 export default function HeroSection() {
     return (
         <div
-            className="relative h-screen w-full"
+            className="relative h-screen w-full overflow-hidden"
             style={{
-                // backgroundImage: `url("/assets/images/bg.jpg")`,
+                backgroundImage: `url("/assets/images/bg.jpg")`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -27,7 +31,12 @@ export default function HeroSection() {
             }}
         >
             <div className="absolute inset-0 bg-black/20 z-0"></div>
-            <div className="h-full min-h-screen flex flex-col lg:flex-row items-center justify-center p-4 sm:p-6 lg:p-10 mx-auto">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className="h-full min-h-screen flex flex-col lg:flex-row items-center justify-center p-4 sm:p-6 lg:p-10 mx-auto"
+            >
                 {/* Left Content */}
                 <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full lg:w-1/2 h-full">
                     <div className="mt-auto z-10">
@@ -79,16 +88,16 @@ export default function HeroSection() {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <div className="flex justify-center lg:justify-end mt-4 sm:mt-6 gap-3 sm:gap-4">
-                            <CarouselPrevious className="p-3 sm:p-4 bg-[#0000BE] border-0 hover:bg-[#FD4055] rounded-full text-white">
+                        <div className="flex justify-center  lg:justify-end mt-4 sm:mt-6 gap-3 sm:gap-4">
+                            <CarouselPrevious className="p-3 sm:p-4 cursor-pointer  border-0 hover:bg-[#FD4055] rounded-full text-white">
                                 <span className="sr-only">Previous</span>
                             </CarouselPrevious>
-                            <CarouselNext className="p-3 sm:p-4 bg-[#0000BE] border-0 hover:bg-[#FD4055] rounded-full text-white">
+                            <CarouselNext className="p-3 sm:p-4 cursor-pointer  border-0 hover:bg-[#FD4055] rounded-full text-white">
                                 <span className="sr-only">Next</span>
                             </CarouselNext>
                         </div>
                     </Carousel>
-                    <Button className="py-4 px-6  lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-10 sm:mt-8 mb-30 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-[#35A8AB]/50 shadow-lg transition-all duration-300 ease-in-out hover:bg-opacity-30 hover:scale-105 hover:shadow-xl hover:-translate-y-1 group">
+                    <Button className="py-4 px-6  lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-10 sm:mt-8 mb-30 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-[#35A8AB]/50 shadow-lg group">
                         Contact Us
                         <span className="flex items-center">
                             <Image
@@ -96,30 +105,38 @@ export default function HeroSection() {
                                 width={30}
                                 height={30}
                                 alt="Arrow pointing up"
-                                className="invert transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-12"
+                                className="invert transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-0.5 group-hover:rotate-1"
                                 unoptimized
                             />
                         </span>
                     </Button>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Play Button */}
+
             <Button
                 variant="link"
-                className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 z-50 px-4 max-w-max flex items-center gap-2 sm:gap-3"
+                className="absolute bottom-4 sm:bottom-6 cursor-pointer left-1/2 transform -translate-x-1/2 z-50 px-4 max-w-max flex items-center gap-2 sm:gap-3"
             >
-                <Image
-                    src="/assets/icons/play-button.png"
-                    width={32}
-                    height={32}
-                    alt="Play Intro Video"
-                    className="invert"
-                    unoptimized
-                />
-                <span className="text-white text-[14px] sm:text-[16px] hidden sm:block">
-                    Watch Our Intro Video
-                </span>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+                    className="flex items-center gap-1 sm:gap-2"
+                >
+                    <Image
+                        src="/assets/icons/play-button.png"
+                        width={32}
+                        height={32}
+                        alt="Play Intro Video"
+                        className="invert"
+                        unoptimized
+                    />
+                    <span className="text-white text-[14px] sm:text-[16px] hidden sm:block">
+                        Watch Our Intro Video
+                    </span>
+                </motion.div>
             </Button>
         </div>
     );
