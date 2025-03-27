@@ -17,14 +17,31 @@ const links = [
 export default function Navbar() {
     // const router = useRouter();
     const [currentPath, setCurrentPath] = useState("");
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        });
+    }
 
     useEffect(() => {
-        // ใน App Router อาจต้องใช้ window.location.pathname ถ้า router.pathname ไม่พร้อมใช้งาน
-        setCurrentPath(window.location.pathname);
+        if (typeof window !== "undefined") {
+            setCurrentPath(window.location.pathname);
+        }
     }, []);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-6">
+        <nav
+            className={
+                `fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-6 ` +
+                (isScrolled ? "bg-[#070c46] transition-all duration-500" : "")
+            }
+        >
             <div className="flex items-center justify-between px-4 mx-auto">
                 <Link href="/" className="flex items-center gap-2">
                     <Image

@@ -40,7 +40,7 @@ export default function HeroSection() {
                 {/* Left Content */}
                 <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full lg:w-1/2 h-full">
                     <div className="mt-auto z-10">
-                        <div className="flex gap-3 sm:gap-4 mb-6 lg:mb-10 sm:mb-8 justify-center sm:justify-start">
+                        <div className="flex gap-3 sm:gap-4 mb-6 lg:mb-14 sm:mb-8 justify-center sm:justify-start">
                             <p className="text-white border-b-4 border-[#FD4055] px-2 py-1 rounded-2xl text-sm sm:text-base">
                                 AI Solutions
                             </p>
@@ -89,7 +89,7 @@ export default function HeroSection() {
                             ))}
                         </CarouselContent>
                         <div className="flex justify-center  lg:justify-end mt-4 sm:mt-6 gap-3 sm:gap-4">
-                            <CarouselPrevious className="p-3 sm:p-4 cursor-pointer  border-0 hover:bg-[#FD4055] rounded-full text-white">
+                            <CarouselPrevious className="p-3 sm:p-4 cursor-pointer border-0 hover:bg-[#FD4055] rounded-full text-white">
                                 <span className="sr-only">Previous</span>
                             </CarouselPrevious>
                             <CarouselNext className="p-3 sm:p-4 cursor-pointer  border-0 hover:bg-[#FD4055] rounded-full text-white">
@@ -97,7 +97,7 @@ export default function HeroSection() {
                             </CarouselNext>
                         </div>
                     </Carousel>
-                    <Button className="py-4 px-6  lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-10 sm:mt-8 mb-30 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-[#35A8AB]/50 shadow-lg group">
+                    <Button className="py-4 px-6  hover:bg-[#35A8AB] transition-colors lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-10 sm:mt-8 mb-30 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-[#35A8AB]/50 shadow-lg group">
                         Contact Us
                         <span className="flex items-center">
                             <Image

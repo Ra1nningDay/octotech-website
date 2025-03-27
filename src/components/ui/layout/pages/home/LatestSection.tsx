@@ -1,23 +1,50 @@
-// import Image from "next/image";
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function LatestSection() {
     return (
         <>
             {/* Section: ViennaUP */}
-            <section className="py-12 sm:py-16 lg:py-18 bg-white">
+            <motion.section
+                className="py-12 sm:py-16 lg:py-18 bg-white"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
                 <div className="container mx-auto px-4 sm:px-6 lg:px-10">
-                    <div className="flex flex-col lg:flex-row  justify-between gap-8 lg:gap-12">
+                    <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
                         {/* Left Content */}
-
-                        <div className="w-full lg:w-1/2 flex flex-col items-center  lg:items-start">
+                        <motion.div
+                            className="w-full lg:w-1/2 flex flex-col items-center lg:items-start"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{
+                                duration: 1,
+                                ease: "easeIn",
+                                delay: 0.4,
+                            }}
+                        >
                             <div className="bg-gray-200 w-full h-[525px] rounded-lg"></div>
-                        </div>
+                        </motion.div>
 
                         {/* Right Content */}
-                        <div className="flex flex-col w-full lg:w-1/2 text-center lg:text-left py-6">
-                            <h1 className="mb-2 text-sm sm:text-md lg:text-lg font-bold ">
-                                Our Latest Activites
+                        <motion.div
+                            className="flex flex-col w-full lg:w-1/2 text-center lg:text-left py-6"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{
+                                duration: 1,
+                                ease: "easeIn",
+                                delay: 0.4,
+                            }}
+                        >
+                            <h1 className="mb-2 text-sm sm:text-md lg:text-lg font-bold">
+                                Our Latest Activities
                             </h1>
                             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#0000BE] mb-6">
                                 Join Us at{" "}
@@ -46,13 +73,13 @@ export default function LatestSection() {
                                 to reach out via our Contact Us page to schedule
                                 a meeting.
                             </p>
-                            <Button className="mt-10 ms-auto py-6 text-md sm:text-lg  cursor-pointer lg:text-xl font-bold max-w-max">
+                            <Button className="mt-10 ms-auto py-6 text-md sm:text-lg cursor-pointer lg:text-xl font-bold max-w-max">
                                 Our Projects
                             </Button>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
         </>
     );
 }
