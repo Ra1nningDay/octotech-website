@@ -7,13 +7,7 @@ export default function LatestSection() {
     return (
         <>
             {/* Section: ViennaUP */}
-            <motion.section
-                className="py-12 sm:py-16 lg:py-18 bg-white"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <section className="py-12 sm:py-16 lg:py-18 bg-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-10">
                     <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
                         {/* Left Content */}
@@ -32,17 +26,8 @@ export default function LatestSection() {
                         </motion.div>
 
                         {/* Right Content */}
-                        <motion.div
-                            className="flex flex-col w-full lg:w-1/2 text-center lg:text-left py-6"
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            transition={{
-                                duration: 1,
-                                ease: "easeIn",
-                                delay: 0.4,
-                            }}
-                        >
+                        <div
+                            className="flex flex-col w-full lg:w-1/2 text-center lg:text-left py-6">
                             <h1 className="mb-2 text-sm sm:text-md lg:text-lg font-bold">
                                 Our Latest Activities
                             </h1>
@@ -76,10 +61,10 @@ export default function LatestSection() {
                             <Button className="mt-10 ms-auto py-6 text-md sm:text-lg cursor-pointer lg:text-xl font-bold max-w-max">
                                 Our Projects
                             </Button>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
-            </motion.section>
+            </section>
         </>
     );
 }
