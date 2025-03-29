@@ -210,8 +210,8 @@ export default function AboutSection() {
                     <ul className="space-y-3 list-disc pl-5">
                       <li>
                         <span className="font-semibold">Innovation:</span> We
-                        constantly push the boundaries of what's possible with
-                        AI technology.
+                        constantly push the boundaries of what&apos;s possible
+                        with AI technology.
                       </li>
                       <li>
                         <span className="font-semibold">Excellence:</span> We
