@@ -97,7 +97,12 @@ export default function HeroSection() {
                             </CarouselNext>
                         </div>
                     </Carousel>
-                    <Button className="py-4 px-6  hover:bg-[#35A8AB] transition-colors lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-10 sm:mt-8 mb-30 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-[#35A8AB]/50 shadow-lg group">
+                    {/* bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600
+                    hover:to-rose-700 */}
+                    <Button
+                        className="py-4 px-6  hover:bg-[#35A8AB] transition-colors lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-10 sm:mt-8 mb-30 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600
+                    hover:to-rose-700  border-[#35A8AB]/50 shadow-lg group"
+                    >
                         Contact Us
                         <span className="flex items-center">
                             <Image
