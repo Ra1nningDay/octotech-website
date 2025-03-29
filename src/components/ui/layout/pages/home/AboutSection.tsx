@@ -160,7 +160,7 @@ export default function AboutSection() {
                     Our mission is to empower businesses by integrating AI
                     seamlessly into their operations, enhancing efficiency and
                     driving innovation. We believe that AI technology should be
-                    accessible to organizations of all sizes, and we're
+                    accessible to organizations of all sizes, and we&apos;re
                     committed to democratizing access to these powerful tools
                     through our solutions and services.
                   </AccordionContent>
