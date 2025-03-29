@@ -9,14 +9,13 @@ import ServiceSection from "@/components/ui/layout/pages/home/ServiceSection";
 // import HomePage from "@/components/ui/layout/pages/home/HomeSection";
 
 export default function Home() {
-    return (
-        <PageLayout>
-            <HeroSection />
-            <LatestSection />
-            <BeforeAboutSection />
-            <ServiceSection />
-            <AboutSection />
-            <ContactSection />
-        </PageLayout>
-    );
+  return (
+    <PageLayout>
+      <HeroSection />
+      <LatestSection />
+      <BeforeAboutSection />
+      <ServiceSection />
+      <ContactSection />
+    </PageLayout>
+  );
 }
