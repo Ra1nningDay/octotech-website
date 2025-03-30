@@ -130,7 +130,7 @@ export default function AboutPage() {
                     Our mission is to empower businesses by integrating AI
                     seamlessly into their operations, enhancing efficiency and
                     driving innovation. We believe that AI technology should be
-                    accessible to organizations of all sizes, and we're
+                    accessible to organizations of all sizes, and we&apos;re
                     committed to democratizing access to these powerful tools
                     through our solutions and services.
                   </AccordionContent>
@@ -180,8 +180,8 @@ export default function AboutPage() {
                     <ul className="space-y-3 list-disc pl-5">
                       <li>
                         <span className="font-semibold">Innovation:</span> We
-                        constantly push the boundaries of what's possible with
-                        AI technology.
+                        constantly push the boundaries of what&apos;s possible
+                        with AI technology.
                       </li>
                       <li>
                         <span className="font-semibold">Excellence:</span> We
