@@ -6,16 +6,16 @@ import Footer from "@/components/ui/layout/footer/Footer";
 // import ContactPopup from "../ContactPopup";
 
 interface PageLayoutProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export default function PageLayout({ children }: PageLayoutProps) {
-    return (
-        <div className="flex flex-col h-screen ">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            {/* <ContactPopup /> */}
-        </div>
-    );
+  return (
+    <div className="flex flex-col h-screen ">
+      <Navbar />
+      <main className="flex-1 ">{children}</main>
+      <Footer />
+      {/* <ContactPopup /> */}
+    </div>
+  );
 }

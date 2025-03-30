@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {
   return (
-    <section className="py-10 md:py-16 lg:py-18">
+    <section className="py-10 md:py-16 lg:py-18 bg-[#070c46]">
       <div className="px-4 sm:px-6 lg:px-10 container mx-auto">
         <Card className="bg-white p-6 sm:p-8 flex flex-col lg:flex-row gap-10 justify-center items-stretch  shadow-sm rounded-xl">
           {/* Google Map */}

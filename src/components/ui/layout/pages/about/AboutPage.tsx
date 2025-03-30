@@ -4,6 +4,7 @@ import type React from "react";
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -11,7 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Users, Target, Award, Sparkles } from "lucide-react";
+import { Users, Target, Sparkles, Home, ChevronRight } from "lucide-react";
 
 // Types for the team members
 interface TeamMember {
@@ -20,54 +21,23 @@ interface TeamMember {
   bio: string;
 }
 
-// Types for the stats
-interface Stat {
-  number: string;
-  label: string;
-  icon?: React.ReactNode;
-}
-
 export default function AboutPage() {
   const [activeAccordion, setActiveAccordion] = useState("who-are-we");
-
-  // Stats data
-  const stats: Stat[] = [
-    {
-      number: "10+",
-      label: "Years Experience",
-      icon: <Award className="h-6 w-6 text-rose-500" />,
-    },
-    {
-      number: "200+",
-      label: "Clients Worldwide",
-      icon: <Users className="h-6 w-6 text-rose-500" />,
-    },
-    {
-      number: "50+",
-      label: "Team Members",
-      icon: <Users className="h-6 w-6 text-rose-500" />,
-    },
-    {
-      number: "98%",
-      label: "Client Satisfaction",
-      icon: <Target className="h-6 w-6 text-rose-500" />,
-    },
-  ];
 
   // Team members data
   const teamMembers: TeamMember[] = [
     {
-      name: "Alex Chen",
+      name: "Lorem",
       role: "CEO & Founder",
       bio: "Former AI researcher with 15+ years of experience in machine learning and business strategy.",
     },
     {
-      name: "Sarah Williams",
+      name: "Lorem Lorem",
       role: "CTO",
       bio: "Expert in AI systems architecture with a background in enterprise software development.",
     },
     {
-      name: "Michael Rodriguez",
+      name: "Lorem Lorem",
       role: "Head of Consulting",
       bio: "Strategic advisor with experience helping Fortune 500 companies implement AI solutions.",
     },
@@ -76,24 +46,45 @@ export default function AboutPage() {
   return (
     <div className={`min-h-screen  text-white `}>
       {/* Header Section */}
-      <div className="flex flex-col bg-[#070c46] h-100 justify-center gap-6 text-center ">
-        <h1 className="text-[48px] font-bold">OCTOTECH — About Us</h1>
+      <div className=" bg-[#070c46] pt-36 pb-32 relative  text-center ">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 right-[-10%] w-[70%] h-[70%] bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-full blur-[120px] transform rotate-12"></div>
+          <div className="absolute bottom-[-10%] left-[-5%] w-[50%] h-[50%] bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-[100px]"></div>
+        </div>
+
+        <Badge
+          variant="outline"
+          className="w-fit mx-auto  border-2 border-red-500 mb-4 text-red-600"
+        >
+          About Us
+        </Badge>
+        <h1 className=" text-4xl md:text-5xl lg:text-6xl mb-8 font-bold">
+          OCTOTECH — Our Stories
+        </h1>
+        <div className="flex items-center justify-center gap-2 text-white/80">
+          <Link
+            href="/"
+            className="flex items-center hover:text-[#1dfebd] transition-colors"
+          >
+            <Home className="h-4 w-4 mr-1" />
+            Home
+          </Link>
+          <ChevronRight className="h-4 w-4" />
+          <span className="text-[#1dfebd]">About Us</span>
+        </div>
       </div>
 
-      <section className="py-16 px-10 md:py-24 relative overflow-hidden bg-[#f0f0f0]">
-        {/* Background elements - removed since they won't be visible on solid background */}
-
+      <section className="py-12 md:py-16 lg:py-18 relative overflow-hidden ">
         <div className="container mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <div className="">
             {/* Accordion Section */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-gray-300/50 rounded-2xl blur-md"></div>
               <Accordion
                 type="single"
                 value={activeAccordion}
-                onValueChange={setActiveAccordion}
+                onValueChange={(val) => setActiveAccordion(val)}
                 collapsible
-                className="w-full bg-white/90 border border-gray-200 shadow-xl rounded-xl overflow-hidden"
+                className="w-full bg-white/90 border border-gray-200 shadow-sm; rounded-xl overflow-hidden"
               >
                 {/* Who Are We */}
                 <AccordionItem
@@ -213,35 +204,11 @@ export default function AboutPage() {
             </div>
 
             {/* Stats Section */}
-            <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="bg-white/90 border border-gray-200 rounded-xl p-6 text-center hover:bg-gray-100 transition-all duration-300 group"
-                >
-                  {stat.icon && (
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 mb-4 group-hover:scale-110 transition-transform">
-                      {stat.icon}
-                    </div>
-                  )}
-                  <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-600 mb-2 group-hover:scale-105 transition-transform">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
 
             {/* Team Leadership */}
-            <div className="mt-24 text-center">
-              <Badge
-                variant="outline"
-                className="w-fit mx-auto border-2 border-red-500 text-red-600 mb-4"
-              >
-                Leadership
-              </Badge>
+            <div className="pt-12 sm:pt-16 lg:pt-18 text-center">
               <h2 className="text-3xl font-bold mb-12 text-gray-900">
-                Meet Our Leadership Team
+                Our Leadership Team
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

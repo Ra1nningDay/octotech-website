@@ -115,7 +115,7 @@ export default function HeroSection() {
       {/* Play Button */}
       <Button
         variant="link"
-        className="absolute bottom-4 sm:bottom-6 cursor-pointer left-1/2 transform -translate-x-1/2 z-50 px-4 max-w-max flex items-center gap-2 sm:gap-3 hover:text-[#10FEBD] transition-colors"
+        className="absolute bottom-4 sm:bottom-6 cursor-pointer left-1/2 transform -translate-x-1/2 z-10 px-4 max-w-max flex items-center gap-2 sm:gap-3 hover:text-[#10FEBD] transition-colors"
       >
         <motion.div
           initial={{ opacity: 0 }}
