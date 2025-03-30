@@ -7,6 +7,10 @@ export default function ServiceSection() {
   return (
     <section className="mx-auto py-16 relative bg-[#070c46] ">
       <div className="container px-4 sm:px-6 lg:px-10 mx-auto">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 right-[-10%] w-[70%] h-[70%] bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-full blur-[120px] transform rotate-12"></div>
+          <div className="absolute bottom-[-10%] left-[-5%] w-[50%] h-[50%] bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-[100px]"></div>
+        </div>
         <div className="text-center mb-16 relative z-10">
           <Badge
             variant="outline"
