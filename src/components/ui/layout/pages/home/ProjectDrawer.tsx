@@ -90,7 +90,7 @@ export default function ProjectDrawer({ isOpen, onClose }: ProjectDrawerProps) {
                 variant="ghost"
                 size="icon"
                 onClick={onClose}
-                className="rounded-full h-12 w-12 bg-white/10 hover:bg-white/20 text-white"
+                className="rounded-full h-12 w-12 bg-white/10 cursor-pointer hover:bg-white/20 text-white"
               >
                 <X className="h-6 w-6" />
               </Button>
