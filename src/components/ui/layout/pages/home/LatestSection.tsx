@@ -62,7 +62,7 @@ export default function LatestSection() {
                     src="/assets/images/vienna.png" // Ensure path is correct
                     alt="OCTOTECH Team at ViennaUP event" // More descriptive alt text
                     fill
-                    className="object-cover object-left" // Use object-cover, adjust object-position if needed
+                    className="object-cover object-center" // Use object-cover, adjust object-position if needed
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 425px" // Add sizes prop for optimization
                     priority
                   />
