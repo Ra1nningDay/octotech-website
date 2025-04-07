@@ -6,7 +6,7 @@ import { Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 export default function ServicePage() {
   // Team members data
   return (
@@ -72,7 +72,7 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
-      <section className="mx-auto container py-16 relative">
+      <section className="mx-auto px-4 sm:px-6 lg:px-10 container py-16 relative">
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 relative z-10">
           {[
             {
