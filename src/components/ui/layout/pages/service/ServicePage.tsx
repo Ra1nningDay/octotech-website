@@ -72,56 +72,55 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
-      <section className="mx-auto py-16 relative ">
-        <div className="container px-4 sm:px-6 lg:px-10 mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 relative z-10">
-            {[
-              {
-                title: "Custom AI Development",
-                description:
-                  "Tailored AI solutions designed specifically for your business needs and challenges.",
-                icon: "🧠",
-              },
-              {
-                title: "Strategic Consulting",
-                description:
-                  "Expert guidance on implementing AI to maximize ROI and business impact.",
-                icon: "💡",
-              },
-              {
-                title: "Process Automation",
-                description:
-                  "Streamline operations with intelligent automation powered by AI.",
-                icon: "⚙️",
-              },
-              {
-                title: "Generative AI Solutions",
-                description:
-                  "Harness the power of generative AI for content, design, and more.",
-                icon: "🔮",
-              },
-            ].map((service, index) => (
-              <Card
-                key={index}
-                className="bg-gradient-to-br from-[#010138] to-[#0d2a3f]  hover:bg-white/10 transition-all"
-              >
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white">
-                    {service.title}
-                  </h3>
-                  <p className="text-white/70 mb-4">{service.description}</p>
-                  <Button
-                    variant="link"
-                    className="p-0 hover:text-red-500/80 text-red-600 gap-1 cursor-pointer"
-                  >
-                    Learn more <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <section className="mx-auto container py-16 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 relative z-10">
+          {[
+            {
+              title: "Custom AI Development",
+              description:
+                "Tailored AI solutions designed specifically for your business needs and challenges.",
+              icon: "🧠",
+            },
+            {
+              title: "Strategic Consulting",
+              description:
+                "Expert guidance on implementing AI to maximize ROI and business impact.",
+              icon: "💡",
+            },
+            {
+              title: "Process Automation",
+              description:
+                "Streamline operations with intelligent automation powered by AI.",
+              icon: "⚙️",
+            },
+            {
+              title: "Generative AI Solutions",
+              description:
+                "Harness the power of generative AI for content, design, and more.",
+              icon: "🔮",
+            },
+          ].map((service, index) => (
+            <Card
+              key={index}
+              className="bg-gradient-to-br from-[#010138] to-[#0d2a3f] hover:bg-white/10 transition-all"
+            >
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  {service.title}
+                </h3>
+                <p className="text-white/70 mb-4">{service.description}</p>
+                <Button
+                  variant="link"
+                  className="p-0 hover:text-red-500/80 text-red-600 gap-1 cursor-pointer"
+                >
+                  Learn more <ArrowRight className="h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
+      {/* 
       <section className="py-20 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <div className="flex justify-between items-center mb-12">
@@ -190,6 +189,7 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 }
