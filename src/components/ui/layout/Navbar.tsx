@@ -37,9 +37,11 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white shadow-md backdrop-blur-sm bg-opacity-90"
-          : "bg-transparent"
+        currentPath === "/"
+          ? isScrolled
+            ? "bg-white shadow-md backdrop-blur-sm bg-opacity-90"
+            : "bg-transparent"
+          : "bg-white shadow-md backdrop-blur-sm bg-opacity-90"
       }`}
     >
       {/* Decorative Elements */}

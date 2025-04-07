@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ServiceSection() {
   return (
@@ -69,9 +70,12 @@ export default function ServiceSection() {
           ))}
         </div>
         <div className="text-center mt-12 relative z-10">
-          <Button className="bg-[#fe5803] hover:bg-[#fe5803]/90 text-white  cursor-pointer  px-10 py-6 uppercase rounded-full font-semibold text-sm tracking-wide">
+          <Link
+            href="/services"
+            className="bg-[#fe5803] flex max-w-max mx-auto hover:bg-[#fe5803]/90 text-white  cursor-pointer  px-6 py-3 uppercase rounded-full font-semibold text-sm tracking-wide"
+          >
             Learn more <ArrowRight className="h-4 w-4 ml-2" />
-          </Button>
+          </Link>
         </div>
       </div>
     </section>
