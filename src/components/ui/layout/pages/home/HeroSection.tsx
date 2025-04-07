@@ -1,141 +1,118 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
+import { Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
-const carouselItems = [
-  "OCTOTECH builds intelligent AI-powered solutions to accelerate business growth — from custom software to strategic consulting.",
-  "We provide cutting-edge AI tools to help businesses optimize their operations and achieve their goals.",
-  "Partner with OCTOTECH to unlock the full potential of generative AI for your organization.",
-];
 
 export default function HeroSection() {
   return (
-    <div
-      className="relative h-screen w-full overflow-hidden"
-      style={{
-        backgroundImage: `url("/assets/images/bg.jpg")`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundColor: "#1A1AEB", // เปลี่ยนเป็นสีน้ำเงินเข้มจาก Palette 1
-      }}
-    >
-      <div className="absolute inset-0 bg-black/30 z-0"></div>{" "}
-      {/* ปรับ overlay ให้สว่างขึ้นเล็กน้อย */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className="h-full min-h-screen flex flex-col lg:flex-row items-center justify-center p-4 sm:p-6 lg:p-10 mx-auto"
-      >
-        {/* Left Content */}
-        <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left w-full lg:w-1/2 h-full">
-          <div className="mt-auto z-10">
-            <div className="flex gap-3 sm:gap-4 mb-6 lg:mb-14 sm:mb-8 justify-center sm:justify-start">
-              <p className="text-white border-b-4 border-[#FE5803] px-2 py-1 rounded-2xl text-sm sm:text-base">
-                AI Solutions
-              </p>
-              <p className="text-white border-b-4 border-[#FE5803] px-2 py-1 rounded-2xl text-sm sm:text-base">
-                Consultation
-              </p>
-            </div>
-            <h1 className="text-[32px] sm:text-[48px] md:text-[60px] lg:text-[70px] font-bold text-white leading-tight">
-              EMPOWER YOUR <br /> BUSINESS <br /> WITH{" "}
-              <span className="text-[#FE5803]">GENERATIVE AI</span>{" "}
-              {/* เปลี่ยนเป็นสีส้มแดงจาก Palette 1 */}
-            </h1>
-          </div>
-          <p className="flex lg:mt-auto gap-3 z-10 sm:gap-4 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[20px] sm:mt-8 mb-8 sm:mb-10 lg:mb-14 text-white leading-relaxed tracking-wide max-w-md sm:max-w-lg lg:max-w-3xl group">
-            <span className="text-[#FE5803] hidden sm:block transition-transform group-hover:scale-110">
-              ▣
-            </span>
-            <span>
-              OCTOTECH builds intelligent AI-powered solutions to{" "}
-              <br className="hidden sm:block" />
-              accelerate business growth — from{" "}
-              <a
-                href="/services"
-                className="underline hover:text-[#35A8AB] transition-colors" // คงสี hover เป็นฟ้าเทอควอยซ์จาก Palette 2
-              >
-                custom software to strategic consulting
-              </a>
-              .
-            </span>
-          </p>
-        </div>
+    <div className="relative bg-white text-black overflow-hidden">
+      {/* Decorative Elements - Absolute Positioned */}
 
-        {/* Right Content */}
-        <div className="flex flex-col items-center justify-start sm:justify-end lg:items-end w-full lg:mt-30 lg:w-1/2 h-full z-10">
-          {/* Carousel */}
-          <Carousel className="w-full max-w-sm sm:max-w-md lg:max-w-lg mt-8 sm:mt-12 lg:mt-14">
-            <CarouselContent>
-              {carouselItems.map((text, index) => (
-                <CarouselItem key={index}>
-                  <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-white text-center lg:text-end">
-                    {text}
-                  </p>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center lg:justify-end mt-4 sm:mt-6 gap-3 sm:gap-4">
-              <CarouselPrevious className="p-3 sm:p-4 cursor-pointer border-0 hover:bg-[#FE5803] rounded-full text-white">
-                <span className="sr-only">Previous</span>
-              </CarouselPrevious>
-              <CarouselNext className="p-3 sm:p-4 cursor-pointer border-0 hover:bg-[#FE5803] rounded-full text-white">
-                <span className="sr-only">Next</span>
-              </CarouselNext>
+      {/* Geometric Shapes */}
+      <div className="absolute top-20 right-[10%] w-16 h-16 border-4 border-[#1A1AEB]/10 rounded-lg transform rotate-12"></div>
+      <div className="absolute bottom-40 left-[15%] w-20 h-20 border-4 border-[#FE5803]/10 transform -rotate-12"></div>
+      <div className="absolute top-[30%] left-[5%] w-12 h-12 border-4 border-[#10FEBD]/10 rounded-full"></div>
+
+      {/* Dotted Grid Pattern */}
+      <div className="container mx-auto px-4 pt-30 pb-16 relative z-10">
+        {/* Main Content */}
+        <div className="max-w-5xl mx-auto text-center mb-10 pt-10">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl lg:text-6xl text-black font-extrabold mb-6"
+          >
+            Empower Your Business With{" "}
+            <span className="text-[#FE5803]">Generative AI</span>
+          </motion.h1>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-2xl md:text-3xl font-medium mb-10 text-black/80"
+          >
+            OCTOTECH builds intelligent AI-powered solutions to
+            <br />
+            accelerate business growth — from
+            <br />
+            custom software to strategic consulting
+          </motion.h2>
+
+          <div className="flex justify-center">
+            <Button className="py-4 px-6 hover:bg-[#10FEBD] transition-colors sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[20px] lg:px-8 lg:py-6 rounded-3xl mt-6 mb-16 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border bg-gradient-to-r from-[#FE5803] to-[#FD4055] hover:from-[#FE5803] hover:to-[#FD4055] border-[#10FEBD]/50 shadow-lg group">
+              Contact Us
+              <span className="flex items-center">
+                <Image
+                  src="/assets/icons/right-up.png"
+                  width={30}
+                  height={30}
+                  alt="Arrow pointing up"
+                  className="invert transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-0.5 group-hover:rotate-1"
+                  unoptimized
+                />
+              </span>
+            </Button>
+          </div>
+
+          {/* Video Section with Decorative Elements */}
+          <div className="relative max-w-4xl mx-auto mb-20">
+            {/* Video Border Decoration */}
+
+            {/* Main Video Container */}
+            <div className="relative bg-white border-4 border-[#10FEBD] rounded-lg p-4 shadow-lg">
+              <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded flex items-center justify-center relative">
+                {/* Decorative Corner Elements */}
+                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-[#1A1AEB]/30"></div>
+                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-[#1A1AEB]/30"></div>
+                <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-[#1A1AEB]/30"></div>
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-[#1A1AEB]/30"></div>
+
+                {/* Play Button */}
+                <div className="w-16 h-16 rounded-full bg-[#1A1AEB] flex items-center justify-center cursor-pointer shadow-lg transition-transform hover:scale-110">
+                  <Play size={30} className="text-white ml-1" />
+                </div>
+              </div>
             </div>
-          </Carousel>
-          {/* ปุ่ม Contact Us */}
-          <Button className="py-4 px-6 hover:bg-[#10FEBD] transition-colors lg:mt-auto sm:py-5 sm:px-7 text-[14px] sm:text-[16px] lg:text-[30px] lg:px-8 lg:py-8 lg:mb-30 rounded-3xl mt-10 sm:mt-8 mb-30 sm:mb-10 max-w-max cursor-pointer text-white flex gap-2 sm:gap-3 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border bg-gradient-to-r from-[#FE5803] to-[#FD4055] hover:from-[#FE5803] hover:to-[#FD4055] border-[#10FEBD]/50 shadow-lg group">
-            Contact Us
-            <span className="flex items-center">
-              <Image
-                src="/assets/icons/right-up.png"
-                width={30}
-                height={30}
-                alt="Arrow pointing up"
-                className="invert transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-0.5 group-hover:rotate-1"
-                unoptimized
-              />
-            </span>
-          </Button>
+
+            {/* Floating Decorative Elements */}
+            <div className="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-[#FE5803]/10"></div>
+            <div className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-[#10FEBD]/10"></div>
+          </div>
+
+          {/* Testimonial Section */}
+          <div className="container mx-auto px-4 text-center relative">
+            {/* Decorative Quote Marks */}
+            <div className="absolute top-0 left-1/4 text-[80px] text-[#1A1AEB]/5 font-serif">
+              ❝
+            </div>
+            <div className="absolute bottom-0 right-1/4 text-[80px] text-[#1A1AEB]/5 font-serif">
+              ❞
+            </div>
+
+            <h3 className="text-xl font-medium text-[#1A1AEB] mb-4 relative z-10">
+              OCTOTECH will impact your business...
+            </h3>
+
+            <div className="flex items-start justify-center relative z-10">
+              <span className="text-[#FE5803] text-5xl leading-none mr-2">
+                &quot;
+              </span>
+              <p className="text-gray-600 max-w-2xl text-lg italic">
+                Our AI solutions focus on getting you the results you want -
+                more business efficiency, growth for your company, as well as
+                innovation and competitive advantage.
+              </p>
+              <span className="text-[#FE5803] text-5xl leading-none ml-2 self-end">
+                &quot;
+              </span>
+            </div>
+          </div>
         </div>
-      </motion.div>
-      {/* Play Button */}
-      <Button
-        variant="link"
-        className="absolute bottom-4 sm:bottom-6 cursor-pointer left-1/2 transform -translate-x-1/2 z-10 px-4 max-w-max flex items-center gap-2 sm:gap-3 hover:text-[#10FEBD] transition-colors"
-      >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
-          className="flex items-center gap-1 sm:gap-2"
-        >
-          <Image
-            src="/assets/icons/play-button.png"
-            width={32}
-            height={32}
-            alt="Play Intro Video"
-            className="invert"
-            unoptimized
-          />
-          <span className="text-white text-[14px] sm:text-[16px] hidden sm:block">
-            Watch Our Intro Video
-          </span>
-        </motion.div>
-      </Button>
+      </div>
     </div>
   );
 }

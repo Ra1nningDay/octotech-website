@@ -14,7 +14,7 @@ export default function ServiceSection() {
         <div className="text-center mb-16 relative z-10">
           <Badge
             variant="outline"
-            className="mb-4 border border-red-500 text-red-500"
+            className="mb-4 border border-[#FF4500] text-[#FF4500]"
           >
             Our Services
           </Badge>
@@ -32,25 +32,21 @@ export default function ServiceSection() {
               title: "Custom AI Development",
               description:
                 "Tailored AI solutions designed specifically for your business needs and challenges.",
-              icon: "🧠",
             },
             {
               title: "Strategic Consulting",
               description:
                 "Expert guidance on implementing AI to maximize ROI and business impact.",
-              icon: "💡",
             },
             {
               title: "Process Automation",
               description:
                 "Streamline operations with intelligent automation powered by AI.",
-              icon: "⚙️",
             },
             {
               title: "Generative AI Solutions",
               description:
                 "Harness the power of generative AI for content, design, and more.",
-              icon: "🔮",
             },
           ].map((service, index) => (
             <Card
@@ -65,7 +61,7 @@ export default function ServiceSection() {
                 <p className="text-white/70 mb-4">{service.description}</p>
                 <Button
                   variant="link"
-                  className="p-0 hover:text-red-500/80 text-red-600 gap-1 cursor-pointer"
+                  className="p-0 hover:text-[#ff4500]/80 text-[#ff4500] gap-1 cursor-pointer"
                 >
                   Learn more <ArrowRight className="h-4 w-4" />
                 </Button>

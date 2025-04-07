@@ -46,7 +46,7 @@ export default function AboutPage() {
   return (
     <div className={`min-h-screen  text-white `}>
       {/* Header Section */}
-      <div className=" bg-[#070c46] pt-36 pb-32 relative  text-center ">
+      <div className=" bg-[#070c46] pt-36 pb-32 relative text-center ">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 right-[-10%] w-[70%] h-[70%] bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-full blur-[120px] transform rotate-12"></div>
           <div className="absolute bottom-[-10%] left-[-5%] w-[50%] h-[50%] bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-[100px]"></div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
 
         <Badge
           variant="outline"
-          className="w-fit mx-auto  border-2 border-red-500 mb-4 text-red-600"
+          className="w-fit mx-auto border-2 border-[#FF4500] mb-4 text-[#FF4500]"
         >
           About Us
         </Badge>

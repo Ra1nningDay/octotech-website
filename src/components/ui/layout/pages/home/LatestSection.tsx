@@ -3,7 +3,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { LayoutTemplate } from "lucide-react";
 import ProjectDrawer from "@/components/ui/layout/pages/home/ProjectDrawer";
+import Image from "next/image";
 
 export default function LatestSection() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -26,16 +29,23 @@ export default function LatestSection() {
                 delay: 0.4,
               }}
             >
-              <div className="bg-gray-200 w-full h-[525px] rounded-lg"></div>
+              <div className="bg-gray-200 w-full h-[525px] relative rounded-lg ">
+                <Image
+                  src="/assets/images/vienna.png"
+                  alt="vienna"
+                  fill
+                  className="rounded-lg"
+                />
+              </div>
             </motion.div>
 
             {/* Right Content */}
             <div className="flex flex-col w-full lg:w-1/2 text-center lg:text-left py-6">
-              <h1 className="mb-2 text-sm sm:text-md lg:text-lg font-bold">
+              <Badge className="mb-4 px-3 py-1 text-sm font-medium bg-[#FF4500] text-white border-none">
                 Our Latest Activities
-              </h1>
+              </Badge>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#0000BE] mb-6">
-                Join Us at <span className="text-[#FD4055]">ViennaUP 2025</span>
+                Join Us at <span className="text-[#FF4500]">ViennaUP 2025</span>
               </h2>
 
               <p className="text-gray-600 text-md sm:text-lg lg:text-xl leading-relaxed mb-6">
@@ -57,6 +67,7 @@ export default function LatestSection() {
                 className="mt-10 ms-auto py-6 text-md sm:text-lg cursor-pointer lg:text-xl font-bold max-w-max"
                 onClick={() => setIsDrawerOpen(true)}
               >
+                <LayoutTemplate />
                 Our Projects
               </Button>
             </div>
