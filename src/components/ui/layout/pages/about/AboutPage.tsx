@@ -12,7 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Users, Target, Sparkles, Home, ChevronRight } from "lucide-react";
+import { Users, Home, ChevronRight } from "lucide-react";
 
 // Types for the team members
 interface TeamMember {

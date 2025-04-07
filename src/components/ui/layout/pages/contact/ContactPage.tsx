@@ -2,7 +2,6 @@
 
 import type React from "react";
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,7 +25,6 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // ที่นี่คุณสามารถเพิ่ม logic ส่งข้อมูลไป backend หรือ API ได้
     setFormData({ name: "", email: "", message: "" });
   };
 
