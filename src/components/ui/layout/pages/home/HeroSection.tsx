@@ -9,13 +9,25 @@ export default function HeroSection() {
   return (
     <div className="relative bg-white text-black overflow-hidden">
       {/* Decorative Elements - Absolute Positioned */}
-
+      <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-[#1A1AEB]/5 blur-3xl"></div>
+      <div className="absolute bottom-40 right-10 w-80 h-80 rounded-full bg-[#FE5803]/5 blur-3xl"></div>
+      <div className="absolute top-1/2 left-0 w-20 h-20 rounded-full bg-[#10FEBD]/10"></div>
+      <div className="absolute top-40 right-20 w-10 h-10 rounded-full bg-[#FE5803]/20"></div>
       {/* Geometric Shapes */}
       <div className="absolute top-20 right-[10%] w-16 h-16 border-4 border-[#1A1AEB]/10 rounded-lg transform rotate-12"></div>
       <div className="absolute bottom-40 left-[15%] w-20 h-20 border-4 border-[#FE5803]/10 transform -rotate-12"></div>
       <div className="absolute top-[30%] left-[5%] w-12 h-12 border-4 border-[#10FEBD]/10 rounded-full"></div>
 
       {/* Dotted Grid Pattern */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+        <div
+          className="absolute top-0 left-0 right-0 bottom-0"
+          style={{
+            backgroundImage: "radial-gradient(#1A1AEB 1px, transparent 1px)",
+            backgroundSize: "30px 30px",
+          }}
+        ></div>
+      </div>
       <div className="container mx-auto px-4 pt-30 pb-16 relative z-10">
         {/* Main Content */}
         <div className="max-w-5xl mx-auto text-center mb-10 pt-10">

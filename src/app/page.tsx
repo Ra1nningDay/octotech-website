@@ -13,7 +13,6 @@ export default function Home() {
     <PageLayout>
       <HeroSection />
       <LatestSection />
-      <BeforeAboutSection />
       <ServiceSection />
       <AboutSection />
       <ContactSection />

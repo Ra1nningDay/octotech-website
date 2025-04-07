@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="absolute top-0 left-1/3 w-full h-[1px] bg-gradient-to-r from-transparent via-[#10FEBD]/20 to-transparent"></div>
       </div>
 
-      <div className="container mx-auto relative">
+      <div className="container mx-auto relative ">
         <div className="flex items-center justify-between px-4">
           <Link href="/" className="flex items-center gap-2 relative z-10">
             <Image
