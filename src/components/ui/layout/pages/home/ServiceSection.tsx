@@ -6,11 +6,6 @@ import { ArrowRight } from "lucide-react";
 export default function ServiceSection() {
   return (
     <section className="mx-auto relative">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-40 h-40 rounded-full bg-[#1A1AEB]/5 blur-3xl -top-10 -left-10" />
-        <div className="absolute w-24 h-24 rounded-full bg-white/5 top-20 right-10" />
-        <div className="absolute w-16 h-16 rounded-full bg-white/10 bottom-40 left-20" />
-      </div>
       <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
         <div
           className="absolute top-0 left-0 right-0 bottom-0"
@@ -74,7 +69,7 @@ export default function ServiceSection() {
           ))}
         </div>
         <div className="text-center mt-12 relative z-10">
-          <Button className="bg-[#0000be] text-white hover:bg-[#0000be]/90 cursor-pointer  px-10 py-6 uppercase rounded-full font-semibold text-sm tracking-wide">
+          <Button className="bg-[#fe5803] hover:bg-[#fe5803]/90 text-white  cursor-pointer  px-10 py-6 uppercase rounded-full font-semibold text-sm tracking-wide">
             Learn more <ArrowRight className="h-4 w-4 ml-2" />
           </Button>
         </div>

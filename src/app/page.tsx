@@ -1,5 +1,4 @@
 import PageLayout from "@/components/ui/layout/PageLayout";
-import BeforeAboutSection from "@/components/ui/layout/pages/home/BeforeAboutSection";
 import HeroSection from "@/components/ui/layout/pages/home/HeroSection";
 import LatestSection from "@/components/ui/layout/pages/home/LatestSection";
 import ContactSection from "@/components/ui/layout/pages/home/ContactSection";

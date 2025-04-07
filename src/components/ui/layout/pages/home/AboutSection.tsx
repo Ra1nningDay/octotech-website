@@ -42,7 +42,7 @@ export default function AboutSection() {
               </p>
 
               <Link href="/about">
-                <Button className="max-w-max uppercase cursor-pointer bg-[#0000be] text-white">
+                <Button className="max-w-max uppercase cursor-pointer bg-[#0000be] hover:bg-[#0000be]/90 text-white">
                   <Info className="mr-2 h-4 w-4" /> more information
                 </Button>
               </Link>
